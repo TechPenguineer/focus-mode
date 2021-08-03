@@ -30,7 +30,7 @@ namespace ocus_mode.Views
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.elapsedTimeCounterLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,17 +46,17 @@ namespace ocus_mode.Views
             this.label1.TabIndex = 0;
             this.label1.Text = "Focus mode is Enabled";
             // 
-            // label2
+            // elapsedTimeCounterLabel
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.label2.Location = new System.Drawing.Point(50, 151);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(687, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "You have been in Focus Mode For: #ElapsedTime";
+            this.elapsedTimeCounterLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.elapsedTimeCounterLabel.AutoSize = true;
+            this.elapsedTimeCounterLabel.Font = new System.Drawing.Font("MS Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elapsedTimeCounterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.elapsedTimeCounterLabel.Location = new System.Drawing.Point(50, 151);
+            this.elapsedTimeCounterLabel.Name = "elapsedTimeCounterLabel";
+            this.elapsedTimeCounterLabel.Size = new System.Drawing.Size(687, 28);
+            this.elapsedTimeCounterLabel.TabIndex = 1;
+            this.elapsedTimeCounterLabel.Text = "You have been in Focus Mode For: #ElapsedTime";
             // 
             // label3
             // 
@@ -92,12 +92,13 @@ namespace ocus_mode.Views
             this.ClientSize = new System.Drawing.Size(996, 587);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.elapsedTimeCounterLabel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "focus";
             this.Text = "focus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.focus_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +107,7 @@ namespace ocus_mode.Views
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label elapsedTimeCounterLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
     }
