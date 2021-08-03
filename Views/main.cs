@@ -16,5 +16,11 @@ namespace ocus_mode.Views
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            focus Focus = new focus();
+            Focus.Show();
+        }
     }
 }

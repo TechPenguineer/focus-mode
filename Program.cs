@@ -16,7 +16,7 @@ namespace ocus_mode
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.main());
+            Application.Run(new Views.focus());
         }
     }
 }
